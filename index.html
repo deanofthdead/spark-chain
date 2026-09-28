@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Spark Chain" />
+    <meta name="description" content="Get the power to the target: a puzzle game of lights, fans, kettles, lasers and bots." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#121826" />
+    <title>Spark Chain</title>
+    <script type="module" crossorigin src="./assets/index-D2Wtoera.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-g8xJb61S.css">
+  </head>
+  <body>
+    <div id="home" class="home">
+      <div class="home-inner">
+        <header class="home-head">
+          <img src="./icon.svg" alt="" class="home-icon" width="72" height="72" />
+          <h1 class="title">Spark<span>Chain</span></h1>
+          <p class="tagline">Get the power to the target.</p>
+        </header>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Daily challenge</h2>
+            <span id="streak" class="streak" hidden></span>
+          </div>
+          <p id="daily-date" class="muted"></p>
+          <div class="daily-grid">
+            <button class="daily-btn easy" data-daily="easy"><span class="d-name">Easy</span><span class="d-status"></span></button>
+            <button class="daily-btn medium" data-daily="medium"><span class="d-name">Medium</span><span class="d-status"></span></button>
+            <button class="daily-btn hard" data-daily="hard"><span class="d-name">Hard</span><span class="d-status"></span></button>
+          </div>
+          <button id="daily-share" class="wide accent" hidden>Share my times</button>
+          <p id="daily-next" class="muted small"></p>
+        </section>
+
+        <section class="panel">
+          <h2>Play</h2>
+          <button id="home-levels" class="wide">Levels <span id="levels-progress" class="muted"></span></button>
+          <p class="muted small">Random puzzle</p>
+          <div class="row3">
+            <button data-random="easy">Easy</button>
+            <button data-random="medium">Medium</button>
+            <button data-random="hard">Hard</button>
+          </div>
+          <button id="home-code" class="wide ghost-btn">Play a shared puzzle</button>
+        </section>
+      </div>
+    </div>
+
+    <div id="app" hidden>
+      <header class="bar">
+        <button id="home-btn" class="icon-btn" aria-label="Home">⌂</button>
+        <nav class="levels">
+          <button id="prev" aria-label="Previous level">‹</button>
+          <span id="level-name"></span>
+          <span id="timer" class="timer" hidden></span>
+          <button id="next" aria-label="Next level">›</button>
+        </nav>
+        <div class="actions">
+          <button id="power" class="power-btn">Power on</button>
+          <button id="hint" hidden>Hint</button>
+          <button id="share">Share</button>
+          <button id="reset">Reset</button>
+        </div>
+      </header>
+      <main id="stage"></main>
+      <footer class="info">
+        <p id="status"></p>
+        <p id="detail"></p>
+      </footer>
+    </div>
+
+    <div id="win" class="overlay" hidden>
+      <div class="card">
+        <h2 id="win-title">Circuit complete</h2>
+        <p id="win-time"></p>
+        <button id="win-share" class="accent" hidden>Share my times</button>
+        <button id="win-next">Next level</button>
+        <button id="win-stay" class="ghost-btn">Stay here</button>
+      </div>
+    </div>
+
+    <div id="share-box" class="overlay" hidden>
+      <form class="card" id="share-form">
+        <div id="share-current">
+          <button type="button" id="share-copy">Copy link</button>
+          <p class="label">The link holds the whole puzzle, so it always works.</p>
+          <p class="label" id="share-code-label">Quick code (matches this version of the game)</p>
+          <p id="share-code" class="code"></p>
+        </div>
+        <p class="label">Play someone else's puzzle</p>
+        <input id="share-input" placeholder="Paste a link, or H-48213" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+        <p id="share-error" class="error"></p>
+        <button type="submit">Play</button>
+        <button type="button" id="share-close" class="ghost-btn">Close</button>
+      </form>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Spark Chain",
+  "short_name": "Spark Chain",
+  "description": "Get the power to the target: a puzzle game of lights, fans, kettles, lasers and bots.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121826",
+  "theme_color": "#121826",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
